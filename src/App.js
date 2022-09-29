@@ -7,7 +7,7 @@ function App() {
   const [review, setReview] = useState(data[0])
   const [value, setValue] = useState(0)
 
-  const { id, image, name, job, text } = review
+  const { image, name, job, text } = review
 
   const changeValue = (delta) => {
     const newValue = (delta + data.length) % data.length
@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     setReview(data[value])
-  }, [changeValue])
+  }, [value])
 
   return (
     <main>
